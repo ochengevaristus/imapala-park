@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impala Park | Videos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/LOGO.png" alt="Impala Park Logo">
+        <h1>Impala Park</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="animal.html">Animals</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Videos Section -->
+  <section>
+    <h3>Wildlife Videos</h3>
+    <div class="video-dropdown">
+      <label for="video-select">Choose a video:</label>
+      <select id="video-select">
+        <option value="Kisumu_Impala_Park_Wildlife_Sanctuary.mp4">Impalas of the Park</option>
+        <option value="Boat_Ride_on_Lake_Victoria.mp4">Boat Ride on Lake Victoria</option>
+        <option value="Giraffes_in_the_Grasslands.mp4">Giraffes in the Grasslands</option>
+      </select>
+    </div>
+    <video id="video-player" controls width="600">
+      <source id="video-source" src="videos/Kisumu _ Impala Park Wildlife Sanctuary _ Kisumu_Kenya(720P_HD).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      <source id="video-source" src="videos/Most Amazing Kruger National Park Wildlife Sightings of 2022(720P_HD).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      <source id="video-source" src="videos/Serengeti National Park_ Tanzania  [Amazing Places 4K](720P_HD).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Impala Park | Designed by Nature Enthusiasts | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <script>
+    // JavaScript to change the video source dynamically
+    document.getElementById('video-select').addEventListener('change', function() {
+      var selectedVideo = this.value;
+      var videoPlayer = document.getElementById('video-player');
+      var videoSource = document.getElementById('video-source');
+
+      // Update the video source to the selected file
+      videoSource.src = 'videos/' + selectedVideo;
+
+      // Load the new video
+      videoPlayer.load();
+    });
+  </script>
+</body>
+</html>
